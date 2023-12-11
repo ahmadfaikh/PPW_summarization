@@ -11,12 +11,6 @@ import networkx as nx
 
 # Import library yang dibutuhkan untuk melakukan data preprocessing
 st.title("Summarization")
-import subprocess
-
-@st.cache_resource
-def download_en_core_web_sm():
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
-download_en_core_web_sm()
 nlp = spacy.load('en_core_web_sm')
 text = st.text_input("Input text")
 # Ekstrak kalimat dari teks
