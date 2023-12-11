@@ -8,10 +8,13 @@ import spacy
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import networkx as nx
+import en_core_web_sm
+
 
 # Import library yang dibutuhkan untuk melakukan data preprocessing
 st.title("Summarization")
-nlp = spacy.load('en_core_web_sm')
+# nlp = spacy.load('en_core_web_sm')
+nlp = en_core_web_sm.load()
 text = st.text_input("Input text")
 # Ekstrak kalimat dari teks
 # text = 'ini adalah text. ini juga test. aku juga text. ini sangat bersih juga saya. kemudian saya berbagi'
