@@ -10,7 +10,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import networkx as nx
 
 # Import library yang dibutuhkan untuk melakukan data preprocessing
-spacy.cli.download('en_core_web_sm')
+spacy.download('en_core_web_sm')
 st.title("Summarization")
 nlp = spacy.load('en_core_web_sm')
 text = st.text_input("Input text")
